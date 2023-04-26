@@ -1,7 +1,14 @@
 {
   "name": "bidirection-map",
+  "description": "A bidirection map for javascript",
   "private": false,
-  "version": "0.0.4",
+  "version": "0.0.5",
+  "author": {
+    "name": "Xiang Dong",
+    "email": "d.xiang@supreium.com"
+  },
+  "homepage": "https://github.com/woodxiang/bidirection-map/blob/main/README.md",
+  "license": "MIT",
   "type": "module",
   "exports": {
     ".": {
