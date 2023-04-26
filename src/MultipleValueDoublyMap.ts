@@ -83,6 +83,9 @@ export class MultipleValueDoublyMap<K, V> {
       throw new Error('in-consistent data');
     }
     values.splice(index, 1);
+    if (values.length === 0) {
+      this.keyToValue.delete(key);
+    }
     this.valueToKey.delete(value);
   }
 
