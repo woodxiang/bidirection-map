@@ -1,4 +1,4 @@
-export class DoublyMap<K, V> {
+export class BidirectionMap<K, V> {
   private readonly keyToValue = new Map<K, V>();
 
   private readonly valueToKey = new Map<V, K>();
@@ -67,3 +67,5 @@ export class DoublyMap<K, V> {
     return this.keyToValue.size;
   }
 }
+
+export type DoublyMap<K, V> = BidirectionMap<K, V>;

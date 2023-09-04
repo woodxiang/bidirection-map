@@ -2,7 +2,7 @@
   "name": "bidirection-map",
   "description": "A bidirection map for javascript",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": {
     "name": "Xiang Dong",
     "email": "d.xiang@supreium.com"

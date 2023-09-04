@@ -1,4 +1,4 @@
-export class MultipleValueDoublyMap<K, V> {
+export class BidirectionMultipleValueMap<K, V> {
   private readonly keyToValue = new Map<K, V[]>();
 
   private readonly valueToKey = new Map<V, K>();
@@ -102,3 +102,5 @@ export class MultipleValueDoublyMap<K, V> {
     return this.valueToKey.size;
   }
 }
+
+export type MultipleValueDoublyMap<K, V> = BidirectionMultipleValueMap<K, V>;

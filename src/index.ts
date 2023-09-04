@@ -1,2 +1,2 @@
-export * from "./DoublyMap";
-export * from "./MultipleValueDoublyMap";
+export * from './BidirectionMap';
+export * from './BidirectionMultipleValueMap';
