@@ -102,5 +102,3 @@ export class BidirectionMultipleValueMap<K, V> {
     return this.valueToKey.size;
   }
 }
-
-export type MultipleValueDoublyMap<K, V> = BidirectionMultipleValueMap<K, V>;

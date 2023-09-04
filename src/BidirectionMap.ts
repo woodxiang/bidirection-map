@@ -67,5 +67,3 @@ export class BidirectionMap<K, V> {
     return this.keyToValue.size;
   }
 }
-
-export type DoublyMap<K, V> = BidirectionMap<K, V>;
