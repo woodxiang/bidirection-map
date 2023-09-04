@@ -68,7 +68,12 @@ export class BidirectionMultipleValueMap<K, V> {
     this.keyToValue.delete(key);
   }
 
-  public deleteValue(value: V): void {
+  /**
+   * Delete a value from the map, if all the values of a key removed. remove the key and return true.
+   * @param value the value to remove
+   * @returns return true if the key of the value removed, otherwise false.
+   */
+  public deleteValue(value: V): boolean {
     const key = this.valueToKey.get(value);
     if (!key) {
       throw new Error('value not found');
@@ -83,10 +88,12 @@ export class BidirectionMultipleValueMap<K, V> {
       throw new Error('in-consistent data');
     }
     values.splice(index, 1);
+    this.valueToKey.delete(value);
     if (values.length === 0) {
       this.keyToValue.delete(key);
+      return true;
     }
-    this.valueToKey.delete(value);
+    return false;
   }
 
   public clear(): void {
