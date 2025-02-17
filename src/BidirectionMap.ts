@@ -3,6 +3,12 @@ export class BidirectionMap<K, V> {
 
   private readonly valueToKey = new Map<V, K>();
 
+  constructor(entries?: [K, V][]) {
+    if (entries) {
+      entries.forEach(([key, value]) => this.set(key, value));
+    }
+  }
+
   public keys() {
     return this.keyToValue.keys();
   }
